@@ -11,7 +11,7 @@ function App() {
           <source media="(min-width: 610px)" srcset={ imgDesktop } />
           <img src={ imgMobile } alt="teste" width={300} className="img-div" />
         </picture>
-        <div className="product-info">
+        <section className="product-info">
           <span className="product-type">P E R F U M E</span>
           <h1 className="product-title">Gabrielle Essence Eau De Parfum</h1>
           <span className="product-desc">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfume-Creator for the House of CHANEL.</span>
@@ -23,7 +23,7 @@ function App() {
             <img src={ iconCart } alt="iconCart" />
             Add to Cart
           </button>
-        </div>
+        </section>
       </div>
     </main>
   );
