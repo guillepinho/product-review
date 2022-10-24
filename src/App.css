@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Montserrat&display=swap');
+
+:root {
+  --bg-color: rgb(242, 235, 227);
+  --bg-white: rgb(255, 255, 255);
+  --dark-blue-title: rgb(28, 35, 43);
+  --dark-grayish-blue-font: rgb(108, 114, 137);
+  --primary-cyan-button: rgb(60, 128, 103);
+  --primary-cyan-button-hover: rgb(26, 64, 49);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--bg-color);
+  color: var(--dark-grayish-blue-font);
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 100vh;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+  top: 0;
+  width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.body {
   align-items: center;
+  display: flex;
+  height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.product {
+  display: flex;
+  height: 450px;
+  width: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.img-div {
+  background-image: url(./images/image-product-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 6px 0 0 6px;
+  width: 300px;
+}
+
+.product-info {
+  background-color: var(--bg-white);
+  border-radius: 0 6px 6px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.product-type {
+  font-size: 12px;
+}
+
+.product-title {
+  color: var(--dark-blue-title);
+  font-family: Fraunces, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.prices {
+  align-items: center;
+  display: flex;
+  flex-flow: row;
+  gap: 20px;
+}
+
+.promo-price {
+  color: var(--primary-cyan-button);
+  font-family: Fraunces, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.normal-price {
+  text-decoration: line-through;
+}
+
+.button {
+  align-items: center;
+  background-color: var(--primary-cyan-button);
+  border: 0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: var(--bg-white);
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  justify-content: space-between;
+  padding: 15px 60px;
+  transition: .2s;
+}
+
+.button:hover {
+  background-color: var(--primary-cyan-button-hover);
+}
+
+@media screen and (max-width: 610px) {
+  .product {
+    flex-flow: column nowrap;
+    height: 610px;
+    width: 340px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .img-div {
+    background-image: url(./images/image-product-mobile.jpg);
+    border-radius: 6px 6px 0 0;
+    height: 240px;
+    width: 340px;
+  }
+
+  .product-info {
+    border-radius: 0 0 6px 6px;
+    padding: 25px;
+    width: 340px;
+  }
+
+  .product-title {
+    font-size: 32px;
   }
 }
