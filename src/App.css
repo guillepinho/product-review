@@ -38,11 +38,7 @@ body {
 }
 
 .img-div {
-  background-image: url(./images/image-product-desktop.jpg);
-  background-position: center;
-  background-size: cover;
   border-radius: 6px 0 0 6px;
-  width: 300px;
 }
 
 .product-info {
@@ -56,15 +52,12 @@ body {
   padding: 30px;
 }
 
-.product-type {
-  font-size: 12px;
-}
-
 .product-title {
   color: var(--dark-blue-title);
   font-family: Fraunces, sans-serif;
   font-size: 36px;
   font-weight: 700;
+  margin: 0;
 }
 
 .prices {
@@ -112,10 +105,12 @@ body {
     width: 340px;
   }
 
+  picture {
+    height: 237px;
+  }
+
   .img-div {
-    background-image: url(./images/image-product-mobile.jpg);
     border-radius: 6px 6px 0 0;
-    height: 240px;
     width: 340px;
   }
 
